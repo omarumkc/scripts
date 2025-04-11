@@ -27,12 +27,12 @@ def main():
     with open(output_path, "w") as f:
         f.write("Built   with    xyz_to_config.py\n")
         f.write(f"{0:>10}{1:>10}{natoms:>10}\n")
-        f.write(f"{a:>15.6f}{0.0:>15.6f}{0.0:>15.6f}\n")
-        f.write(f"{0.0:>15.6f}{a:>15.6f}{0.0:>15.6f}\n")
-        f.write(f"{0.0:>15.6f}{0.0:>15.6f}{a:>15.6f}\n")
+        f.write(f"{a:>20.12f}{0.0:>20.12f}{0.0:>20.12f}\n")
+        f.write(f"{0.0:>20.12f}{a:>20.12f}{0.0:>20.12f}\n")
+        f.write(f"{0.0:>20.12f}{0.0:>20.12f}{a:>20.12f}\n")
         for atom in atoms:
             f.write(f"{atom[0]:<8}{atom[1]:>7}\n")
-            f.write(f"{atom[2]:>15.6f}{atom[3]:>15.6f}{atom[4]:>15.6f}\n")
+            f.write(f"{atom[2]:>15.9f}{atom[3]:>15.9f}{atom[4]:>15.9f}\n")
         print(f"Converted {xyz_path} to {output_path}")
 
 if __name__ == "__main__":
