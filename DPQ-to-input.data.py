@@ -50,7 +50,7 @@ with open('HISTORY', 'r') as f, open('input.data', 'w') as out:
                 coord_line = " ".join([f"{float(x) * ang_to_bohr:15.9f}" for x in coord_line_raw.split()])
                 vel_line = f.readline().strip()
                 force_line_raw = f.readline().strip()
-                force_line = " ".join([f"{float(x) / force_conversion}" for x in force_line_raw.split()])
+                force_line = " ".join([f"{float(x) / force_conversion:15.9f}" for x in force_line_raw.split()])
                 
                 charge_value = f"{charge_dict[charge_index]:15.9f}"
                 out.write(f"atom {coord_line} {atom_lines[0]} {charge_value} 0 {force_line}\n")
