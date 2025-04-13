@@ -59,8 +59,8 @@ with open('HISTORY', 'r') as f, open('input.data', 'w') as out:
 
             energy_value = f"{energy_dict[energy_index]}"
             energy_index += 1
-            out.write(f"Energy   {energy_value}\n")
-            out.write("Charge   0\n")
+            out.write(f"energy   {energy_value}\n")
+            out.write("charge   0\n")
             out.write("end\n")
 
         frame_counter += 1
