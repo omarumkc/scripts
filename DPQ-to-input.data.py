@@ -40,9 +40,9 @@ with open('HISTORY', 'r') as f, open('input.data', 'w') as out:
                 parts = line.split()
                 converted_parts = [str(float(x) * ang_to_bohr) for x in parts]
                 return " ".join(converted_parts)
-            out.write(f"Lattice {convert_box_line(box_lines[0])}\n")
-            out.write(f"Lattice {convert_box_line(box_lines[1])}\n")
-            out.write(f"Lattice {convert_box_line(box_lines[2])}\n")
+            out.write(f"lattice {convert_box_line(box_lines[0])}\n")
+            out.write(f"lattice {convert_box_line(box_lines[1])}\n")
+            out.write(f"lattice {convert_box_line(box_lines[2])}\n")
             
             for i in range(0, n_atoms*4, 4):
                 atom_lines = f.readline().split()
